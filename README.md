@@ -1,2 +1,2 @@
-# EDMP
-ICRA24 EDMP project page
+# AMT-Hyp
+AMT-Hyp project page

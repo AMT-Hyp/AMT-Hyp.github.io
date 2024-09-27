@@ -50,25 +50,13 @@
 
             <div class="is-size-8 publication-authors">
               <span class="author-block">
-                <a href="https://kallol-saha.github.io/" target="_blank"><span class="looking">Kallol&nbsp;Saha</span></a><sup>*1</sup>,</span>
-              <span class="author-block">
-                <a href="http://vishal-2000.github.io/" target="_blank"><span class="looking">Vishal&nbsp;Mandadi</span></a><sup>*1</sup>, </span>
-              </span>
+                <a href="https://sanketkalwar.github.io/" target="_blank"><span class="looking">Sanket&nbsp;Kalwar</span></a><sup>*1</sup>,</span>
               <span class="author-block">
                 <a href="http://www.linkedin.com/in/jayaram6111997" target="_blank">Jayaram&nbsp;Reddy</a><sup>*1</sup>,
               </span>
               <span class="author-block">
-                <a href="#" target="_blank">Ajit&nbsp;Srikanth</a><sup>1</sup>,
-              </span><br>
-
-              <span class="author-block">
-                <a href="https://skymanaditya1.github.io/" target="_blank">Aditya&nbsp;Agarwal</a><sup>2</sup>,
-              </span>
-
-              <span class="author-block">
-                <a href="https://bipashasen.github.io/" target="_blank">Bipasha&nbsp;Sen</a><sup>2</sup>,
-              </span>
-
+                <a href="https://sites.google.com/view/brojeshwar/home" target="_blank">Brojeshwar&nbsp;Bhowmick</a><sup>2</sup>,
+              </span>              
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=0zgDoIEAAAAJ" target="_blank">Arun&nbsp;Singh</a><sup>3</sup>,
               </span>
@@ -81,15 +69,15 @@
 
             <div class="is-size-9 publication-authors">
               <span class="author-block"><sup>1</sup>Robotic&nbsp;Research&nbsp;Center&nbsp;IIIT Hyderabad,
-                <sup>2</sup>Massachusetts&nbsp;Institute&nbsp;of&nbsp;Technology ,
+                <sup>2</sup>TCS&nbsp;Research&nbsp;India,
                 <sup>3</sup>University&nbsp;of&nbsp;Tartu </span><br>
                 <small><sup>*</sup>Equal Contribution. Authors ordered randomly</small> </span>
               <!-- <span class="author-block"><sup>2</sup>Cornell Tech, Cornell University &nbsp; </span> -->
             </div>
             
-            <span class="looking"><small>Looking for MS/PhD positions for FY 2024!</small></span>
+            <!-- <span class="looking"><small>Looking for MS/PhD positions for FY 2024!</small></span> -->
 
-            <h1 style="font-size:16px;font-weight:bold">Accepted at ICRA 2024</h1>
+            <!-- <h1 style="font-size:16px;font-weight:bold">Accepted at ICRA 2024</h1> -->
 
             <div class="column has-text-centered">
               <div class="publication-links">
@@ -104,7 +92,7 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/vishal-2000/EDMP" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/AMT-Hyp/amt_hyp" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -123,10 +111,10 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-      <source src="videos/teaser_compressed.mp4" type="video/mp4">
+      <source src="videos/AMT-Hyp_teaser_video.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">EDMP</span> combines the strengths of classical planning and deep-learning for motion-planning in joint space generalizing to arbitrary scenes directly at inference!
+        <span class="dnerf">AMT-Hyp</span> an adversarial framework for Multi Task Reinforcement Learning (MTRL) using Hypernetworks
       </h2>
       </div>
     </div>
@@ -214,14 +202,13 @@
     </div>
   </section>
   
-    <section class="hero is-light is-small">
+    <!-- <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
         <h2 class="subtitle has-text-centered">
           EDMP at the time of <b>training</b>!
-        </h2>
-        <!-- <br> -->
-        <div id="results-carousel" class="carousel results-carousel">
+        </h2> -->
+        <!-- <div id="results-carousel" class="carousel results-carousel">
           <div class="item item-toby">
             <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
                 <source src="videos/train1.mp4" type="video/mp4">
@@ -255,7 +242,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -265,33 +252,29 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Classical motion planning for robotic manipulation includes a set of general algorithms that aim to
-              minimize
-              a scene-specific cost of executing a given plan to generate a
-              potentially valid collision-free trajectory. This approach offers
-              remarkable adaptability, as they can be directly used for any
-              new scene without needing specific training datasets. However,
-              without a prior understanding of what diverse valid trajectories
-              are and without specially designed cost functions for a given
-              scene, the overall solutions tend to have low success rates.
-              While deep-learning-based algorithms tremendously improve
-              success rates, they are much harder to adopt without specialized
-              training datasets. We propose EDMP, an Ensemble-of-costs-
-              guided Diffusion for Motion Planning that aims to combine the
-              strengths of classical and deep-learning-based motion planning.
-              Our diffusion-based network is trained on a set of diverse
-              general valid trajectories enabling the model to implicitly learn
-              the properties of a valid trajectory. Like classical planning, for
-              any new scene at the time of inference, we compute collision
-              costs and incorporate this cost at each timestep of the diffusion
-              network to generate valid collision-free trajectories. Instead of
-              a single collision cost that may be insufficient in capturing
-              diverse cues across scenes, we use an ensemble of collision
-              costs to guide the diffusion process, significantly improving
-              the success rate compared to classical planners. As we show
-              in our experiments, EDMP outperforms SOTA deep-learning-
-              based methods in most cases while retaining the generalization
-              capabilities primarily associated with classical planners
+              A key challenge in building generalist agents is
+              enabling them to perform multiple tasks while simultaneously
+              adapting to variations across the tasks efficiently, particularly
+              in a zero-shot manner. Multi-task Reinforcement Learning
+              (MTRL) is a paradigm that enables agents to learn a single
+              policy that can be deployed to perform multiple tasks in a
+              given environment. A straightforward approach like parameter
+              sharing introduces challenges such as conflicting gradients and
+              determining the optimal way to distribute shared parameters
+              across tasks. In this work, we introduce AMT-Hyp, a framework
+              for training hypernetworks in MTRL that consists of HypLa-
+              tent, an adversarial autoencoder that generates diverse task-
+              conditioned latent policy parameters, and HypFormer, a single-
+              layer transformer that performs soft-weighted aggregation on
+              these priors towards expert policy parameters. Our approach
+              not only outperforms previous hypernetwork based methods
+              but also performs comparably to the existing state-of-the-art
+              methods in MTRL on MetaWorld benchmark. Additionally,
+              experiments on MuJoCo continuous control tasks demonstrate
+              the frameworks strong zero-shot learning capabilities, allowing
+              it to generalize to unseen in-distribution tasks without addi-
+              tional fine-tuning. Our framework also achieves performance
+              comparable to state-of-the-art offline meta-RL methods.
             </p>
           </div>
         </div>
@@ -305,12 +288,11 @@
             <div class="column is-full-width">
               <h2 class="title is-3" style="text-align: center;">Overview</h2>
               <div class="content has-text-justified" style="position: relative; z-index: 0;">
-                <img src="images/edmparch.png">
+                <img src="images/AMTHYP-Architecture_final1.jpg">
           <p>
-            <b>Architecture.</b> EDMP leverages a diffusion model alongside an ensemble of l cost functions. The diffusion model denoises a batch
-of trajectories τ from t = T to 0, while each cost in the ensemble guides a specific sub-batch. We calculate the gradient ∇J of each
-collision cost (intersection or swept volume) in the ensemble from robot and environment bounding boxes, using differentiable forward
-kinematics. After denoising is over, the trajectory with minimum swept volume is chosen as the solution.  
+            <b>Architecture.</b> consists of HypLatent, an adversarial autoencoder that generates diverse task-
+            conditioned latent policy parameters, and HypFormer, a single layer transformer that performs soft-weighted aggregation on
+            these priors towards expert policy parameters.
           </p>
               </div>
             </div>
@@ -318,7 +300,7 @@ kinematics. After denoising is over, the trajectory with minimum swept volume is
         </div>
       </section>
       
-    <section>
+    <!-- <section>
     	<h2 class="title is-3" style="text-align: center; margin-bottom:-25px">Results</h2>
     
     <div class="hero-body edmp-diff-vis">
@@ -326,9 +308,9 @@ kinematics. After denoising is over, the trajectory with minimum swept volume is
         <h2 class="subtitle has-text-centered">
           Visualizing EDMP's diffusion steps at the time of inference</b>!
         </h2>
-        <div id="results-carousel" class="carousel results-carousel">
+        <div id="results-carousel" class="carousel results-carousel"> -->
           <!-- <br> -->
-          <div class="item item-toby">
+          <!-- <div class="item item-toby">
             <video poster="" id="toby" autoplay muted loop playsinline height="300%">
                 <source src="videos/denoisings/denoising_video_speedened1.mp4" type="video/mp4">
             </video>
@@ -372,7 +354,7 @@ kinematics. After denoising is over, the trajectory with minimum swept volume is
       </div>
     </div>
   </section>
-      
+       -->
 
 
       <!--<section class="section" style="margin-bottom: -80px;">
@@ -393,7 +375,7 @@ kinematics. After denoising is over, the trajectory with minimum swept volume is
         </div>
       </section>-->
 
-      <section class="hero teaser">
+      <!-- <section class="hero teaser">
         <div class="container is-max-desktop">
           <div class="hero-body">
             <center>
@@ -421,7 +403,7 @@ kinematics. After denoising is over, the trajectory with minimum swept volume is
             </center>
           </div>
         </div>
-      </section>
+      </section> -->
 
   <!--/ Paper video. -->
   <div class="columns is-centered has-text-centered">
@@ -436,7 +418,7 @@ kinematics. After denoising is over, the trajectory with minimum swept volume is
   </div>
   </div>
   </section>
-
+<!-- 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
@@ -452,7 +434,7 @@ kinematics. After denoising is over, the trajectory with minimum swept volume is
     </code></pre>
     </div>
   </section>
-  
+   -->
   <div hidden="hidden">
   <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=2oCrnzNWBNsmNO2WGMHvLpem_9_jluEUy9J8i0GRHJw"></script>
   </div>
